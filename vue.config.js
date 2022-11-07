@@ -1,10 +1,10 @@
-const { defineConfig } = require('@vue/cli-service')
+//const { defineConfig } = require('@vue/cli-service')
 
 const port ='8090'
 
-module.exports = defineConfig({
-  transpileDependencies: true,
-
+module.exports = {
+  //transpileDependencies: true,
+  lintOnSave: process.env.NODE_ENV === 'development',
 
   devServer:{
     host:'0.0.0.0',
@@ -24,4 +24,4 @@ module.exports = defineConfig({
     }
   }
 
-})
+}
